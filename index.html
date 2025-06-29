@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Annalakshmi Bhavan - Chennai | Authentic Vegetarian South Indian & North Indian Cuisine</title>
+    <meta name="description" content="Experience authentic South Indian and North Indian vegetarian cuisine at Annalakshmi Bhavan in Chennai. Perfect for family dining, quick bites, and catering traditional events.">
+    <meta name="keywords" content="vegetarian restaurant Chennai, South Indian food, North Indian Thali, pure veg Chennai, family restaurant Chennai, dosa, idli, tiffin, catering Chennai, traditional Indian food, Chennai restaurant booking">
+    <meta name="author" content="Annalakshmi Bhavan">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrwJ+o11A+9u5g5x6o/lB8u+gJ6GgD+7+c5lW/w4ZJ+w5L7Q0+c4zC5x3z5p8+q3y5w=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* General Styles & Variables */
+        :root {
+            --primary-color: #4CAF50; /* Green - represents freshness, vegetarian */
+            --secondary-color: #8BC34A; /* Lighter Green */
+            --accent-color-1: #FFC107; /* Gold/Yellow - represents Indian tradition */
+            --text-dark: #333;
+            --text-light: #f8f8f8;
+            --bg-light: #F9FBE7; /* Very light yellow-green, warm */
+            --bg-dark: #388E3C; /* Darker Green for contrasts */
+            --btn-primary-bg: var(--accent-color-1);
+            --btn-primary-hover: #FFB300;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+            --border-radius: 8px;
+            --spacing-unit: 20px;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        /* Base Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+            padding-top: 70px; /* Space for sticky header */
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color-1);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            margin-bottom: calc(var(--spacing-unit) / 2);
+            color: var(--primary-color); 
+            line-height: 1.2;
+        }
+
+        /* Specific override for dark background sections */
+        .bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4,
+        .hero h1, .hero h2, .hero h3, .hero h4,
+        .events-callout h1, .events-callout h2, .events-callout h3, .events-callout h4,
+        .cta-final h1, .cta-final h2, .cta-final h3, .cta-final h4 {
+            color: var(--text-light); 
+        }
+
+        /* Override for specific headings that need to be green even in dark sections based on prompt */
+        .contact-forms-section h2, .contact-forms-section h3 {
+            color: var(--primary-color); 
+        }
+
+
+        h1 { font-size: 2.8em; }
+        h2 { font-size: 2.2em; }
+        h3 { font-size: 1.6em; }
+
+        p {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            padding: var(--spacing-unit) 0;
+        }
+
+        .section-padding {
+            padding: calc(3 * var(--spacing-unit)) 0;
+        }
+
+        .bg-light { background-color: var(--bg-light); }
+        .bg-dark { background-color: var(--bg-dark); }
+        .text-light { color: var(--text-light); }
+        .text-dark { color: var(--text-dark); }
+        .text-center { text-align: center; }
+        .lead {
+            font-size: 1.15em;
+            max-width: 800px;
+            margin: 0 auto var(--spacing-unit);
+            line-height: 1.8;
+        }
+        .mt-3 { margin-top: calc(1.5 * var(--spacing-unit)); }
+        .mt-4 { margin-top: calc(2 * var(--spacing-unit)); }
+        .ml-1 { margin-left: 5px; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: var(--spacing-unit) calc(1.5 * var(--spacing-unit));
+            border-radius: var(--border-radius);
+            font-size: 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--btn-primary-bg);
+            color: var(--text-dark);
+            box-shadow: 0 4px 6px var(--shadow-light);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--btn-primary-hover);
+            box-shadow: 0 6px 10px var(--shadow-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        .btn-lg {
+            padding: calc(1.2 * var(--spacing-unit)) calc(2 * var(--spacing-unit));
+            font-size: 1.1em;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--shadow-dark);
+            transition: background-color 0.3s ease, padding 0.3s ease;
+        }
+
+        .header.sticky {
+            padding: 10px 0;
+            background-color: rgba(76, 175, 80, 0.95); 
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%; 
+            width: 100%;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.8em;
+            color: var(--text-light);
+            line-height: 1;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 0.5em;
+            font-family: var(--font-body);
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: -5px;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: none; 
+        }
+
+        .nav-menu ul li {
+            display: inline-block;
+            margin-left: var(--spacing-unit);
+        }
+
+        .nav-menu ul li a {
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 1em;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .nav-menu ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color-1);
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu ul li a:hover::after,
+        .nav-menu ul li a.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.8em;
+            cursor: pointer;
+            display: block; 
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Mobile Nav Overlay */
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1001;
+            display: none; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%);
+            transition: transform 0.4s ease-out;
+        }
+
+        .mobile-nav-overlay.open {
+            transform: translateX(0%);
+            display: flex;
+        }
+
+        .mobile-nav-overlay .close-button {
+            position: absolute;
+            top: var(--spacing-unit);
+            right: var(--spacing-unit);
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 2.5em;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-nav-menu ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            width: 100%;
+        }
+
+        .mobile-nav-menu ul li {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .mobile-nav-menu ul li a {
+            color: var(--text-light);
+            font-size: 1.8em;
+            padding: 10px 0;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-menu ul li a:hover {
+            color: var(--accent-color-1);
+        }
+
+        .mobile-nav-cta {
+            margin-top: calc(2 * var(--spacing-unit));
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-unit);
+            padding: 0 var(--spacing-unit);
+            width: 100%;
+            align-items: center;
+        }
+
+        .mobile-nav-cta .btn {
+            width: 80%; 
+            max-width: 300px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            overflow: hidden;
+            margin-top: -70px; 
+        }
+
+        .hero-video img { 
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: -1;
+        }
+
+        .hero-content {
+            z-index: 1;
+            padding-top: 70px; 
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            color: var(--text-light);
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: var(--text-light);
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+            opacity: 0.9;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-unit);
+            align-items: center;
+        }
+
+        /* About Mini Section */
+        .about-mini p {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Signature Dishes / Menu Highlights */
+        .menu-highlights h2, .menu-highlights .lead {
+            color: var(--primary-color);
+        }
+        .dish-grid {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: calc(2 * var(--spacing-unit));
+            margin-top: calc(2 * var(--spacing-unit));
+        }
+
+        .dish-card {
+            background-color: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px var(--shadow-light);
+            overflow: hidden;
+            text-align: center;
+            opacity: 0; 
+            transform: translateY(20px); 
+        }
+
+        .dish-card.visible {
+            animation: fadeIn 0.8s forwards;
+        }
+
+        .dish-card img {
+            width: 100%;
+            height: 250px; 
+            object-fit: cover;
+            display: block;
+        }
+
+        .dish-card h3 {
+            margin: var(--spacing-unit) 0 calc(var(--spacing-unit) / 2);
+            color: var(--primary-color);
+        }
+
+        .dish-card p {
+            padding: 0 var(--spacing-unit);
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: var(--spacing-unit); 
+        }
+
+        /* Events Callout */
+        .events-callout {
+            position: relative;
+            color: var(--text-light);
+            overflow: hidden;
+        }
+
+        .parallax-bg {
+            background-attachment: scroll; 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .events-callout .overlay {
+            background: rgba(0, 0, 0, 0.6); 
+        }
+
+        .content-over-parallax {
+            position: relative;
+            z-index: 2;
+        }
+
+        .events-callout h2, .events-callout .lead {
+            color: var(--text-light);
+        }
+
+        .event-highlights-grid {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: calc(1.5 * var(--spacing-unit));
+            margin-top: calc(2 * var(--spacing-unit));
+            margin-bottom: calc(2 * var(--spacing-unit));
+        }
+
+        .event-highlight-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: calc(1.5 * var(--spacing-unit));
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .event-highlight-item .icon-large {
+            font-size: 3em;
+            color: var(--accent-color-1);
+            margin-bottom: 10px;
+        }
+
+        .event-highlight-item h3 {
+            color: var(--accent-color-1);
+            margin-bottom: calc(var(--spacing-unit) / 4);
+        }
+
+        .event-highlight-item p {
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        /* Testimonials Carousel */
+        .testimonial-carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .testimonial-slide {
+            display: none; 
+            text-align: center;
+            padding: var(--spacing-unit);
+            background-color: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px var(--shadow-light);
+            margin-bottom: var(--spacing-unit);
+            min-height: 150px; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonial-slide.active {
+            display: flex; 
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .testimonial-slide .profile-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: calc(var(--spacing-unit) / 2);
+            border: 3px solid var(--primary-color);
+        }
+
+        .testimonial-slide .quote {
+            font-style: italic;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        .testimonial-slide .author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .carousel-nav .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .carousel-nav .dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        /* Final CTA Section */
+        .cta-final {
+            position: relative;
+            color: var(--text-light);
+            overflow: hidden;
+        }
+
+        .cta-final .overlay {
+            background: rgba(0, 0, 0, 0.7); 
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-unit);
+            align-items: center;
+            margin-top: calc(2 * var(--spacing-unit));
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: calc(3 * var(--spacing-unit)) 0 calc(var(--spacing-unit));
+            font-size: 0.9em;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: calc(2 * var(--spacing-unit));
+            margin-bottom: calc(2 * var(--spacing-unit));
+            text-align: center;
+        }
+
+        .footer-col h3 {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .footer-col p, .footer-col ul li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color-1);
+        }
+
+        .footer-col .social-links {
+            margin-top: var(--spacing-unit);
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-unit);
+        }
+
+        .footer-col .social-links a {
+            color: var(--text-light);
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: var(--accent-color-1);
+        }
+
+        .footer-col i {
+            margin-right: 8px;
+            color: var(--accent-color-1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-unit);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: underline;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--accent-color-1);
+        }
+
+        .zenora-watermark {
+            font-size: 16px; 
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 10px; 
+        }
+        .zenora-watermark a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .zenora-watermark a:hover {
+            color: var(--accent-color-1);
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design for Tablet & Desktop */
+        @media (min-width: 768px) {
+            h1 { font-size: 3.5em; }
+            h2 { font-size: 2.8em; }
+            h3 { font-size: 1.8em; }
+
+            body {
+                padding-top: 90px; 
+            }
+
+            .header {
+                padding: 20px 0;
+            }
+            .header.sticky {
+                padding: 15px 0;
+            }
+
+            .logo {
+                font-size: 2.2em;
+            }
+
+            .logo span {
+                font-size: 0.6em;
+            }
+
+            .hamburger {
+                display: none; 
+            }
+
+            .nav-menu ul {
+                display: flex; 
+            }
+
+            .hero {
+                padding-top: 90px; 
+            }
+            .hero h1 {
+                font-size: 4em;
+            }
+            .hero p {
+                font-size: 1.5em;
+            }
+            .hero-ctas {
+                flex-direction: row; 
+                justify-content: center;
+                gap: calc(1.5 * var(--spacing-unit));
+            }
+
+            .dish-grid {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            
+            .event-highlights-grid {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+
+            .testimonial-carousel {
+                width: 80%; 
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr); 
+                text-align: left;
+            }
+            .footer-col .social-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 { font-size: 4.5em; }
+            h2 { font-size: 3.2em; }
+            h3 { font-size: 2em; }
+
+            .nav-menu ul li {
+                margin-left: calc(1.5 * var(--spacing-unit));
+            }
+
+            .hero h1 {
+                font-size: 5em;
+            }
+
+            .dish-grid {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+            
+            .testimonial-carousel {
+                width: 70%; 
+            }
+
+            .footer-col {
+                padding-right: var(--spacing-unit); 
+            }
+            .footer-col:last-child {
+                padding-right: 0;
+            }
+        }
+
+        /* About Page Specific Styles (Included in the single file) */
+        .about-hero {
+            background-color: var(--primary-color); 
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: var(--text-light);
+            margin-top: -70px; 
+            padding-top: 70px; 
+        }
+
+        .about-hero .overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .about-hero h1 {
+            color: var(--text-light);
+            font-size: 3em;
+            z-index: 1;
+        }
+
+        .about-intro-text {
+            padding: calc(3 * var(--spacing-unit)) 0;
+        }
+        
+        /* Events Page Specific Styles (Included in the single file) */
+        .events-hero {
+            background-color: var(--primary-color); 
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: var(--text-light);
+            margin-top: -70px; 
+            padding-top: 70px; 
+        }
+
+        .events-hero .overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .events-hero h1 {
+            color: var(--text-light);
+            font-size: 3em;
+            z-index: 1;
+        }
+
+        .event-service-section {
+            padding: calc(3 * var(--spacing-unit)) 0;
+        }
+
+        .event-service-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: calc(3 * var(--spacing-unit));
+            background-color: var(--text-light);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px var(--shadow-light);
+            overflow: hidden;
+        }
+
+        .event-service-item:nth-child(even) {
+            flex-direction: column-reverse; 
+        }
+
+        .event-service-item .image-placeholder {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0; 
+            color: #555;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .event-service-content {
+            padding: calc(1.5 * var(--spacing-unit));
+        }
+
+        .event-service-content h3 {
+            margin-bottom: var(--spacing-unit);
+            color: var(--primary-color);
+        }
+
+        .event-service-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .event-service-content ul li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .event-service-content ul li::before {
+            content: '•';
+            color: var(--accent-color-1);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        @media (min-width: 768px) {
+            .event-service-item {
+                flex-direction: row; 
+            }
+            .event-service-item:nth-child(even) {
+                flex-direction: row-reverse; 
+            }
+            .event-service-item .image-placeholder {
+                width: 50%;
+                height: auto;
+                min-height: 350px;
+            }
+        }
+
+        /* Contact Page Specific Styles (Included in the single file) */
+        .contact-hero {
+            background-color: var(--primary-color); 
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: var(--text-light);
+            margin-top: -70px; 
+            padding-top: 70px; 
+        }
+
+        .contact-hero .overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-hero h1 {
+            color: var(--text-light);
+            font-size: 3em;
+            z-index: 1;
+        }
+
+        .contact-main-content {
+            display: flex;
+            flex-direction: column;
+            gap: calc(3 * var(--spacing-unit));
+            padding: calc(3 * var(--spacing-unit)) 0;
+        }
+
+        .contact-info-section {
+            background-color: var(--bg-light);
+            padding: calc(2 * var(--spacing-unit));
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px var(--shadow-light);
+            text-align: center;
+        }
+
+        .contact-info-section h2 {
+            margin-bottom: calc(1.5 * var(--spacing-unit));
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-unit);
+            margin-top: calc(2 * var(--spacing-unit));
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .info-item i {
+            font-size: 1.8em;
+            color: var(--accent-color-1);
+        }
+
+        .contact-forms-section {
+            background-color: var(--bg-light);
+            padding: calc(2 * var(--spacing-unit));
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px var(--shadow-light);
+        }
+
+        .contact-forms-section h2 {
+            text-align: center;
+            margin-bottom: calc(2 * var(--spacing-unit));
+        }
+
+        /* Specific style for Tally form embed */
+        .tally-form-embed {
+            margin-top: var(--spacing-unit); 
+            background-color: var(--bg-dark); 
+            color: var(--text-light); 
+            padding: var(--spacing-unit);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px var(--shadow-light);
+            text-align: center;
+        }
+        .tally-form-embed h3, .tally-form-embed p {
+            color: var(--text-light); 
+        }
+        .tally-form-embed iframe {
+            display: block; 
+            margin: 0 auto; 
+        }
+        .tally-form-note {
+            font-size: 0.9em;
+            color: var(--text-light); 
+            margin-top: 10px;
+        }
+
+        .map-section {
+            background-color: var(--bg-light);
+            padding: var(--spacing-unit);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px var(--shadow-light);
+        }
+
+        .map-container {
+            height: 300px;
+            width: 100%;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (min-width: 768px) {
+            .contact-main-content {
+                flex-direction: row;
+            }
+            .contact-info-section {
+                flex: 1;
+                margin-right: calc(1.5 * var(--spacing-unit));
+            }
+            .contact-forms-section {
+                flex: 2;
+            }
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+        @media (min-width: 1024px) {
+            .info-grid {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+            .contact-info-section {
+                flex: 1;
+            }
+            .contact-forms-section {
+                flex: 3;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header" id="main-header">
+        <div class="container">
+            <a href="#hero" class="logo">Annalakshmi <span>Bhavan</span></a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about-full" class="nav-link">About Us</a></li>
+                    <li><a href="#menu-highlights" class="nav-link">Menu</a></li>
+                    <li><a href="#events-full" class="nav-link">Catering</a></li>
+                    <li><a href="#contact-full" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <button class="close-button" id="close-mobile-menu" aria-label="Close navigation menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-nav-menu">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about-full">About Us</a></li>
+                <li><a href="#menu-highlights">Menu</a></li>
+                <li><a href="#events-full">Catering</a></li>
+                <li><a href="#contact-full">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary">Order Online / Reserve</a>
+            </div>
+        </nav>
+    </div>
+
+    <section id="hero" class="hero">
+        <div class="hero-overlay" style="background-color: var(--primary-color);"></div> 
+        <div class="hero-content container">
+            <h1>Savor the Taste of Tradition: Pure Vegetarian Delights.</h1>
+            <p>Experience authentic South and North Indian vegetarian cuisine in the heart of Chennai, crafted with love and fresh ingredients.</p>
+            <div class="hero-ctas">
+                <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary">Order Online / Reserve Table</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-mini" class="about-mini section-padding bg-light">
+        <div class="container text-center">
+            <h2>Our Legacy of Flavor</h2>
+            <p class="lead">Annalakshmi Bhavan has been a cherished name in Chennai for decades, serving generations with timeless vegetarian delicacies. We are committed to upholding the rich culinary traditions of India, preparing every dish with devotion, purity, and the authentic flavors that remind you of home.</p>
+            <a href="#about-full" class="btn btn-outline">Learn More About Us <i class="fas fa-arrow-right ml-1"></i></a>
+        </div>
+    </section>
+
+    <section id="menu-highlights" class="menu-highlights section-padding">
+        <div class="container">
+            <h2 class="text-center">Our Bhavan's Specialties</h2>
+            <p class="lead text-center">A glimpse into our most beloved and popular vegetarian dishes, enjoyed by families across Chennai.</p>
+            <div class="dish-grid">
+                <div class="dish-card fade-in">
+                    <img src="https://i.ibb.co/4wdwY5bt/sample-image.png" alt="Crispy Masala Dosa"> 
+                    <h3>Crispy Masala Dosa</h3>
+                    <p>A classic favorite, golden-crisp dosa filled with spiced potato masala, served with sambar and chutneys. It's a staple for breakfast or a light dinner.</p>
+                </div>
+                <div class="dish-card fade-in">
+                    <img src="https://i.ibb.co/4wdwY5bt/sample-image.png" alt="Traditional Mini Tiffin"> 
+                    <h3>Traditional Mini Tiffin</h3>
+                    <p>A delightful combo of mini idli, mini dosa, pongal, vada, and kesari – perfect for a quick yet satisfying meal that offers variety.</p>
+                </div>
+                <div class="dish-card fade-in">
+                    <img src="https://i.ibb.co/4wdwY5bt/sample-image.png" alt="Grand North Indian Thali"> 
+                    <h3>Grand North Indian Thali</h3>
+                    <p>A wholesome platter featuring a variety of North Indian curries, bread, rice, dal, and dessert, offering a complete and fulfilling experience.</p>
+                </div>
+                <div class="dish-card fade-in">
+                    <img src="https://i.ibb.co/4wdwY5bt/sample-image.png" alt="Authentic Filter Coffee"> 
+                    <h3>Authentic Filter Coffee</h3>
+                    <p>Experience the invigorating aroma and rich taste of our freshly brewed South Indian filter coffee, the perfect way to start your day or end a meal.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary">Order Online / Reserve Table <i class="fas fa-utensils ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="events-callout" class="events-callout section-padding bg-dark text-light parallax-bg" style="background-color: var(--bg-dark);"> 
+        <div class="overlay"></div>
+        <div class="container text-center content-over-parallax">
+            <h2>Authentic Catering for Every Occasion.</h2>
+            <p class="lead">From intimate family gatherings to grand wedding feasts, our vegetarian catering services bring the true taste of Annalakshmi Bhavan to your special event.</p>
+            <div class="event-highlights-grid">
+                <div class="event-highlight-item">
+                    <i class="fas fa-hand-holding-heart icon-large"></i>
+                    <h3>Weddings & Engagements</h3>
+                    <p>Traditional and delicious vegetarian spreads for your joyous celebrations.</p>
+                </div>
+                <div class="event-highlight-item">
+                    <i class="fas fa-building icon-large"></i>
+                    <h3>Corporate Lunches</h3>
+                    <p>Wholesome and hygienic vegetarian meals for your office events and meetings.</p>
+                </div>
+                <div class="event-highlight-item">
+                    <i class="fas fa-seedling icon-large"></i>
+                    <h3>Pooja & Housewarmings</h3>
+                    <p>Pure vegetarian offerings prepared with sanctity and authentic taste for religious ceremonies.</p>
+                </div>
+            </div>
+            <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary">Inquire for Catering <i class="fas fa-calendar-check ml-1"></i></a>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center">What Our Patrons Say</h2>
+            <div class="testimonial-carousel" id="testimonial-carousel">
+                <div class="testimonial-slide">
+                    <img src="https://i.ibb.co/VpVZtGXk/Screenshot-2025-05-23-044607.png" alt="Customer Profile" class="profile-img">
+                    <p class="quote">"Annalakshmi Bhavan delivers authentic South Indian flavors every time! Their dosa is incredibly crispy, and the sambar is just perfect. It's truly a taste of home."</p>
+                    <p class="author">- Mrs. Lakshmi Devi, Loyal Customer</p>
+                </div>
+                <div class="testimonial-slide">
+                    <img src="https://i.ibb.co/VpVZtGXk/Screenshot-2025-05-23-044607.png" alt="Customer Profile" class="profile-img">
+                    <p class="quote">"We chose Annalakshmi Bhavan for our corporate event, and the catering was outstanding. The variety of dishes in the North Indian Thali was impressive, and everything tasted fresh and delicious."</p>
+                    <p class="author">- Mr. Rajesh Kumar, Event Host</p>
+                </div>
+                <div class="testimonial-slide">
+                    <img src="https://i.ibb.co/VpVZtGXk/Screenshot-2025-05-23-044607.png" alt="Customer Profile" class="profile-img">
+                    <p class="quote">"Every visit to Annalakshmi Bhavan is a delight. The filter coffee is a must-try, and their Mini Tiffin always hits the spot. The staff are so welcoming too!"</p>
+                    <p class="author">- Ms. Saranya Menon, Food Enthusiast</p>
+                </div>
+            </div>
+            <div class="carousel-nav text-center mt-3">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    ---
+    <section id="about-full" class="about-full section-padding bg-light">
+        <div class="about-hero hero" style="background-color: var(--primary-color);"> 
+            <div class="overlay"></div>
+            <div class="container text-center content-over-parallax">
+                <h1>About Annalakshmi Bhavan</h1>
+            </div>
+        </div>
+        <div class="container about-intro-text">
+            <h2 class="text-center">Our Pure Vegetarian Journey</h2>
+            <p class="lead text-center">Annalakshmi Bhavan was established with a singular dedication to pure vegetarian cuisine, rooted in the rich traditions of South and North India. For over three decades, we have served as a culinary landmark in Chennai, known for our uncompromising quality, authentic flavors, and a dining experience that embodies warmth and hospitality.</p>
+            <p class="lead text-center">Our chefs, steeped in traditional culinary arts, meticulously prepare each dish using fresh, hand-picked ingredients. We believe in providing wholesome, hygienic, and delectable food that caters to every palate, from the everyday tiffin to the elaborate thali. Our commitment is to uphold the sanctity of vegetarian food and deliver a taste that resonates with every family.</p>
+        </div>
+    </section>
+
+    ---
+    <section id="events-full" class="events-full section-padding bg-light">
+        <div class="events-hero hero" style="background-color: var(--primary-color);"> 
+            <div class="overlay"></div>
+            <div class="container text-center content-over-parallax">
+                <h1>Authentic Vegetarian Catering</h1>
+            </div>
+        </div>
+        <div class="container event-service-section">
+            <h2 class="text-center">Bringing Our Kitchen to Your Event</h2>
+            <p class="lead text-center">Annalakshmi Bhavan offers comprehensive vegetarian catering services, ensuring your special moments are graced with delicious, hygienic, and authentic Indian flavors. We cater to all scales of events with customizable menus.</p>
+            
+            <div class="event-service-item fade-in">
+                <div class="event-service-content">
+                    <h3>Wedding & Family Functions</h3>
+                    <p>Make your celebrations memorable with our traditional vegetarian feasts. Perfect for:</p>
+                    <ul>
+                        <li>Wedding Receptions</li>
+                        <li>Engagement Ceremonies</li>
+                        <li>Seemantham & Baby Showers</li>
+                        <li>Housewarming & Anniversaries</li>
+                    </ul>
+                    <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary">Inquire for Wedding Catering</a>
+                </div>
+            </div>
+
+            <div class="event-service-item fade-in">
+                <div 
+                <div class="event-service-content">
+                    <h3>Corporate & Institutional Catering</h3>
+                    <p>Reliable and wholesome vegetarian meal solutions for your professional needs:</p>
+                    <ul>
+                        <li>Office Lunch & Dinner</li>
+                        <li>Conferences & Seminars</li>
+                        <li>Staff Meals</li>
+                        <li>Daily Tiffin Services (Bulk)</li>
+                    </ul>
+                    <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary">Request Corporate Quote</a>
+                </div>
+            </div>
+
+            <div class="event-service-item fade-in"> 
+                <div class="event-service-content">
+                    <h3>Pooja, Festivals & Small Gatherings</h3>
+                    <p>Authentic and pure vegetarian food prepared for religious and special occasions:</p>
+                    <ul>
+                        <li>Temple & Home Pooja Prasadam</li>
+                        <li>Festival Food Packages</li>
+                        <li>Birthday Parties</li>
+                        <li>Family Get-Togethers</li>
+                    </ul>
+                    <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary">Order for Special Occasions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+    <section id="contact-full" class="contact-full section-padding bg-dark">
+        <div class="contact-hero hero" style="background-color: var(--primary-color);"> 
+            <div class="overlay"></div>
+            <div class="container text-center content-over-parallax">
+                <h1>Connect With Annalakshmi Bhavan</h1>
+            </div>
+        </div>
+        <div class="container contact-main-content">
+            <div class="contact-info-section">
+                <h2 class="text-dark">Our Contact Details</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>7, Gandhi Road, Adyar, Chennai - 600020</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:info@annalakshmibhavan.com">info@annalakshmibhavan.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Open: Daily, 7 AM - 10 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <p><a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></p>
+                    </div>
+                </div>
+                <div class="social-links mt-4">
+                    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-forms-section">
+                <h2 class="text-primary">Online Orders & Inquiries</h2> 
+                
+                <h3 class="text-primary" id="reservation-form-anchor">Order Online / Dine-in Reservations / Catering Inquiry</h3> 
+                <p class="text-center tally-form-note">For quick orders (pickup/delivery), to book a table for dine-in, or to inquire about our catering services, please use our convenient online form below:</p>
+                <div class="tally-form-embed">
+                    <iframe data-tally-src="https://tally.so/embed/3qqEv5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="100" frameborder="0" marginheight="0" marginwidth="0" title="Share Your Website/Portal Details"></iframe>
+                    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                    <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary mt-3">Open Full Online Form</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container map-section mt-4">
+            <h2 class="text-dark">Find Us Here</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.602111812845!2d80.25206237508688!3d13.06041498725838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526759c908c69f%3A0x6d9e0d1d2e1b1b1b!2sGandhi%20Road%2C%20Adyar%2C%20Chennai%2C%20Tamil%20Nadu%20600020!5e0!3m2!1sen!2sin!4v1717395040103!5m2!1sen!2sin" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Annalakshmi Bhavan Location"></iframe>
+            </div>
+        </div>
+    </section>
+
+    ---
+    <section id="cta-final" class="cta-final section-padding bg-dark text-light parallax-bg" style="background-color: var(--bg-dark);"> 
+        <div class="overlay"></div>
+        <div class="container text-center content-over-parallax">
+            <h2>Ready to Savor Authentic Vegetarian Delights?</h2>
+            <p class="lead">Whether it's a quick tiffin, a family meal, or a grand catering event, Annalakshmi Bhavan is here to serve you.</p>
+            <div class="cta-buttons">
+                <a href="https://tally.so/r/3qqEv5" target="_blank" class="btn btn-primary btn-lg">Order Online / Reserve Now</a>
+            </div>
+        </div>
+    </section>
+
+    ---
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>Annalakshmi Bhavan</h3>
+                    <p>Authentic pure vegetarian South & North Indian cuisine in Chennai. Tradition on your plate.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about-full">About Us</a></li>
+                        <li><a href="#menu-highlights">Menu</a></li>
+                        <li><a href="#events-full">Catering</a></li>
+                        <li><a href="#contact-full">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 7, Gandhi Road, Adyar, Chennai - 600020</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@annalakshmibhavan.com">info@annalakshmibhavan.com</a></p>
+                    <p><i class="fas fa-clock"></i> Open: Daily, 7 AM - 10 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Annalakshmi Bhavan. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+                <p class="zenora-watermark">Powered by <a href="https://zenora-ai.vercel.app/" target="_blank" rel="noopener noreferrer">ZENORA AI</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ------------------------------------
+            // Header & Mobile Navigation Logic
+            // ------------------------------------
+            const mainHeader = document.getElementById('main-header');
+            const hamburger = document.getElementById('hamburger-menu');
+            const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+            const closeButton = document.getElementById('close-mobile-menu');
+            const mobileNavLinks = mobileNavOverlay.querySelectorAll('a');
+            const desktopNavLinks = document.querySelectorAll('.nav-menu ul li a');
+
+            // Sticky Header on Scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 0) {
+                    mainHeader.classList.add('sticky');
+                } else {
+                    mainHeader.classList.remove('sticky');
+                }
+            });
+
+            // Toggle Mobile Nav
+            function toggleMobileMenu() {
+                mobileNavOverlay.classList.toggle('open');
+                document.body.style.overflow = mobileNavOverlay.classList.contains('open') ? 'hidden' : ''; 
+            }
+
+            hamburger.addEventListener('click', toggleMobileMenu);
+            closeButton.addEventListener('click', toggleMobileMenu);
+
+            // Close mobile nav and smooth scroll when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    const targetId = link.getAttribute('href');
+                    if (targetId.startsWith('#')) {
+                        event.preventDefault(); 
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const headerHeight = mainHeader.offsetHeight;
+                            const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                    toggleMobileMenu(); 
+                });
+            });
+
+            // ------------------------------------
+            // Active Navigation Link Highlighting (for both desktop and mobile)
+            // ------------------------------------
+            const allNavLinks = document.querySelectorAll('.nav-menu ul li a, .mobile-nav-menu ul li a');
+            const sections = document.querySelectorAll('section[id]'); 
+
+            function highlightNavLink() {
+                let currentActiveSectionId = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - mainHeader.offsetHeight - 50; 
+                    const sectionHeight = section.offsetHeight;
+
+                    if (window.scrollY >= sectionTop && window.scrollY < (sectionTop + sectionHeight)) {
+                        currentActiveSectionId = section.id;
+                    }
+                });
+
+                allNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (currentActiveSectionId && link.getAttribute('href') === `#${currentActiveSectionId}`) {
+                        link.classList.add('active');
+                    } else if (currentActiveSectionId === 'hero' && link.getAttribute('href') === '#hero') {
+                         link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNavLink);
+            highlightNavLink(); 
+
+            // ------------------------------------
+            // Testimonial Carousel Logic
+            // ------------------------------------
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dots = document.querySelectorAll('.carousel-nav .dot');
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    slide.style.display = 'none'; 
+                    dots[i].classList.remove('active');
+                });
+
+                if (slides[index]) {
+                    slides[index].classList.add('active');
+                    slides[index].style.display = 'flex'; 
+                    dots[index].classList.add('active');
+                    currentSlide = index;
+                }
+            }
+
+            let slideInterval;
+            if (totalSlides > 0) {
+                slideInterval = setInterval(() => {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    showSlide(currentSlide);
+                }, 5000); 
+
+                // Manual navigation via dots
+                dots.forEach(dot => {
+                    dot.addEventListener('click', (event) => {
+                        clearInterval(slideInterval); 
+                        const slideIndex = parseInt(event.target.dataset.slide);
+                        showSlide(slideIndex);
+                        slideInterval = setInterval(() => {
+                            currentSlide = (currentSlide + 1) % totalSlides;
+                            showSlide(currentSlide);
+                        }, 5000); 
+                    });
+                });
+                showSlide(0); 
+            }
+
+
+            // ------------------------------------
+            // Scroll Animations (Fade In)
+            // ------------------------------------
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observerOptions = {
+                root: null, 
+                rootMargin: '0px',
+                threshold: 0.1 
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            fadeInElements.forEach(el => observer.observe(el));
+
+
+            // Smooth scroll for internal links (for desktop nav)
+            desktopNavLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#')) {
+                        event.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const headerHeight = mainHeader.offsetHeight;
+                            const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
